@@ -1,0 +1,91 @@
+h1 {
+  color: #F12A11;
+  font-size: 38px;
+  text-align: center;
+  border-bottom: 3px solid ;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 0;
+  right: 8px;
+  left: 8px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0px;
+  min-height: 260px;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* background-color:rgb(255, 218, 224); */
+}
+
+main {
+  /* background-color: lightskyblue; */
+  width: 700px;
+}
+
+#gestures-sec {
+  display: flex;
+  height: 300px;
+  /* background-color: lightgreen; */
+}
+#gestures-sec button {
+  flex: 1;
+  background-color: inherit;
+  border: none;
+}
+#gestures-sec button img {
+  width: 80%;
+}
+
+#score-sec {
+  /* background-color: aquamarine; */
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+#playersChoices, #result {
+  padding: 8px 0px;
+}
+
+#score {
+  display: grid;
+  grid-template-columns: 120px 140px 120px;
+  column-gap: 35px;
+  justify-content: center;
+}
+#score-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 8px;
+  /* background-color: gray; */
+}
+#score-text {
+  color: #F12A11;
+  border-right: 3px solid;
+  padding-right: 5px;
+}
+
+#reset-sec{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  /* background-color: lightcoral; */
+}
+#reset-button {
+  width: 170px;
+  height: 50px;
+  font-size: 23px;
+  font-weight: 600;
+  background-color: white;
+  color: #F12A11;
+  border: 3px solid #F12A11;
+  border-radius: 50px;
+}
