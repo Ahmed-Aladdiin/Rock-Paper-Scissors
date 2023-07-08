@@ -1,9 +1,15 @@
 let result = '';
-const score = [0,0,0];
+let score = [0,0,0];
 
 window.addEventListener('load', ()=>renderScore());
 
 document.querySelectorAll('.gestures').forEach(element => element.addEventListener('click', ()=>runGame(element.id)));
+document.querySelector('#reset-button').addEventListener('click', ()=>{
+  score = [0,0,0];
+  document.querySelector('#result').innerHTML = '';
+  document.querySelector('#playersChoices').innerHTML = '';
+  renderScore();
+});
 
 function genChoice() {
   const randNum = Math.random();
