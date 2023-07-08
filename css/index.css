@@ -42,10 +42,12 @@ main {
   width: 80%;
 }
 
-#score-sec {
+#score-sec, #reset-sec {
   /* background-color: aquamarine; */
   font-size: 25px;
   font-weight: 600;
+}
+#score-sec {
   text-align: center;
   margin: 10px 0px;
 }
@@ -79,8 +81,8 @@ main {
   height: 60px;
   /* background-color: lightcoral; */
 }
-#reset-button {
-  width: 170px;
+#reset-button, #yes-button {
+  padding: 0px 18px;
   height: 50px;
   font-size: 23px;
   font-weight: 600;
@@ -88,6 +90,9 @@ main {
   color: #f47317;
   border: 3px solid #F12A11;
   border-radius: 50px;
+}
+#reset-timer {
+  margin: 0px 20px;
 }
 
 #playersChoices {

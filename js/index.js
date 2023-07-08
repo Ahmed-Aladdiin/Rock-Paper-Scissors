@@ -4,7 +4,7 @@ let score = [0,0,0];
 window.addEventListener('load', ()=>renderScore());
 
 document.querySelectorAll('.gestures').forEach(element => element.addEventListener('click', ()=>runGame(element.id)));
-document.querySelector('#reset-button').addEventListener('click', ()=> reset());
+document.querySelector('#reset-button').addEventListener('click', ()=> supReset());
 
 function genChoice() {
   const randNum = Math.random();
@@ -84,9 +84,34 @@ function renderChoices(playerChoice, pcChoice) {
   document.querySelector('#playersChoices').innerHTML = `Your choice: <img src='imgs/${playerChoice}-up-64.png' id="playerChoice"><img src="imgs/${pcChoice}-up-64.png" id="pcChoice">:PC choice`;
 }
 
+let I ;
+
+function supReset() {
+  let timer = 5;
+  document.querySelector('#reset-sec').innerHTML = `Are you sure you want to reset the score ?<span id='reset-timer'>${timer--}</span> <button id='yes-button'>Yes</button>`;
+  document.querySelector('#yes-button').addEventListener('click', () => reset());
+
+  I = setInterval(() => {
+    if(timer < 1)
+    {
+      returnResetButton();
+      return;
+    }
+    document.querySelector('#reset-timer').innerHTML = ` ${timer} `;
+    timer--;
+  }, 1000);
+}
+
 function reset() {
   score = [0,0,0];
   document.querySelector('#result').innerHTML = '';
   document.querySelector('#playersChoices').innerHTML = '';
   renderScore();
+  returnResetButton();
+}
+
+function returnResetButton () {
+  document.querySelector('#reset-sec').innerHTML = `<button id="reset-button">Reset Score</button>`;
+  document.querySelector('#reset-button').addEventListener('click', ()=> supReset());
+  clearInterval(I);
 }
