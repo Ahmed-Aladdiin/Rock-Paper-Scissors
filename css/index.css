@@ -19,24 +19,30 @@ body {
   min-height: 260px;
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-
-  /* background-color:rgb(255, 218, 224); */
 }
 
 main {
-  /* background-color: lightskyblue; */
   width: 700px;
+  margin-top: 70px;
 }
 
 #gestures-sec {
   display: flex;
   height: 300px;
-  /* background-color: lightgreen; */
+  justify-content: center;
+  align-items: center;
 }
 #gestures-sec button {
   flex: 1;
   background-color: inherit;
   border: none;
+  cursor: pointer;
+  /* border: 3px solid #F12A11; */
+  box-shadow: 0px 0px 10px rgba(0,0,0, 0.18);;
+  margin: 0px 10px;
+  border-radius: 150px;
+  width: 200px;
+  height: 200px;
 }
 #gestures-sec button img {
   width: 80%;
