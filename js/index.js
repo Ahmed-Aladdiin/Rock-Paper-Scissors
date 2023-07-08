@@ -80,5 +80,5 @@ function renderScore() {
 }
 
 function renderChoices(playerChoice, pcChoice) {
-  document.querySelector('#playersChoices').innerHTML = `Your choice: <img src='imgs/${playerChoice}-up-64.png'><img src="imgs/${pcChoice}-up-64.png">:PC choice`;
+  document.querySelector('#playersChoices').innerHTML = `Your choice: <img src='imgs/${playerChoice}-up-64.png' id="playerChoice"><img src="imgs/${pcChoice}-up-64.png" id="pcChoice">:PC choice`;
 }
