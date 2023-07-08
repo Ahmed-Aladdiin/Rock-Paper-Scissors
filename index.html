@@ -8,20 +8,21 @@
     <h1>Rock Paper Scissors</h1>
     <main id="container">
       <div id="gestures-sec">
-        <button><img src="imgs/rock-up-256.png"></button>
-        <button><img src="imgs/paper-up-256.png"></button>
-        <button><img src="imgs/scissors-up-256.png"></button>
+        <button class="gestures" id="rock"><img src="imgs/rock-up-256.png"></button>
+        <button class="gestures" id="paper"><img src="imgs/paper-up-256.png"></button>
+        <button class="gestures" id="scissors"><img src="imgs/scissors-up-256.png"></button>
       </div>
       <div id="score-sec">
-        <div id="playersChoices">Tie</div>
-        <div id="result">You chose:</div>
+        <div id="playersChoices"></div>
+        <div id="result"></div>
         <div id="score">
-          <div id="score-blocks"><div id="score-text">Wins</div><div id="score-points">55</div></div>
-          <div id="score-blocks"><div id="score-text">losses</div><div id="score-points">55</div></div>
-          <div id="score-blocks"><div id="score-text">Ties</div><div id="score-points">55</div></div>
+          <div id="score-blocks"><div id="score-text">Wins</div><div class="score-points"></div></div>
+          <div id="score-blocks"><div id="score-text">losses</div><div class="score-points"></div></div>
+          <div id="score-blocks"><div id="score-text">Ties</div><div class="score-points"></div></div>
         </div>
       </div>
       <div id="reset-sec"><button id="reset-button">Reset Score</button></div>
-    </main>  
+    </main>
+    <script src="js/index.js"></script>
   </body>
 </html>
