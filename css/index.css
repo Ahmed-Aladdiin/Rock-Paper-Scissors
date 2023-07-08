@@ -67,8 +67,8 @@ main {
   /* background-color: gray; */
 }
 #score-text {
-  color: #F12A11;
-  border-right: 3px solid;
+  color: #f47317;
+  border-right: 3px solid #F12A11;
   padding-right: 5px;
 }
 
@@ -85,7 +85,7 @@ main {
   font-size: 23px;
   font-weight: 600;
   background-color: white;
-  color: #F12A11;
+  color: #f47317;
   border: 3px solid #F12A11;
   border-radius: 50px;
 }
