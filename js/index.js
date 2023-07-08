@@ -68,6 +68,7 @@ function runGame (playerChoice) {
   }
 
   document.querySelector('#result').innerHTML = result;
+  renderChoices(playerChoice,pcChoice);
   renderScore();
 }
 
@@ -76,4 +77,8 @@ function renderScore() {
   scoreList.forEach((element, index) => {
     element.innerHTML = score[index];
   });
+}
+
+function renderChoices(playerChoice, pcChoice) {
+  document.querySelector('#playersChoices').innerHTML = `Your choice: <img src='imgs/${playerChoice}-up-64.png'><img src="imgs/${pcChoice}-up-64.png">:PC choice`;
 }
