@@ -89,3 +89,18 @@ main {
   border: 3px solid #F12A11;
   border-radius: 50px;
 }
+
+#playersChoices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#playerChoice, #pcChoice {
+  margin: 0px 10px;
+}
+#playerChoice {
+  transform: rotate(90deg);
+}
+#pcChoice {
+  transform: rotate(-90deg) rotateY(180deg);
+}
