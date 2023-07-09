@@ -1,8 +1,7 @@
 let result = '';
-let score = JSON.parse(localStorage.getItem('score')) || [0,0,0];
+let score = JSON.parse(sessionStorage.getItem('score')) || [0,0,0];
 
 window.addEventListener('load', ()=>renderScore());
-window.addEventListener('unload', () => localStorage.removeItem('score'));
 
 document.querySelectorAll('.gestures').forEach(element => element.addEventListener('click', ()=>runGame(element.id)));
 document.querySelector('#reset-button').addEventListener('click', ()=> supReset());
@@ -70,7 +69,8 @@ function runGame (playerChoice) {
   }
 
   document.querySelector('#result').innerHTML = result;
-  localStorage.setItem('score', JSON.stringify(score));
+  sessionStorage.setItem('score', JSON.stringify(score));
+  console.log(sessionStorage);
   renderChoices(playerChoice,pcChoice);
   renderScore();
 }
@@ -108,7 +108,7 @@ function reset() {
   score = [0,0,0];
   document.querySelector('#result').innerHTML = '';
   document.querySelector('#playersChoices').innerHTML = '';
-  localStorage.setItem('score', JSON.stringify(score));
+  sessionStorage.setItem('score', JSON.stringify(score));
   renderScore();
   returnResetButton();
 }
