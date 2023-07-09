@@ -2,6 +2,14 @@ let result = '';
 let score = JSON.parse(sessionStorage.getItem('score')) || [0,0,0];
 
 window.addEventListener('load', ()=>renderScore());
+window.addEventListener('keydown', (event)=>{
+  if(event.key === 'r')
+    runGame('rock');
+  else if (event.key === 'p')
+    runGame('paper');
+  else if (event.key === 's')
+    runGame('scissors');
+});
 
 document.querySelectorAll('.gestures').forEach(element => element.addEventListener('click', ()=>runGame(element.id)));
 document.querySelector('#reset-button').addEventListener('click', ()=> supReset());
